@@ -1,0 +1,200 @@
+\documentclass{beamer}
+\mode<presentation> {
+\usetheme{Amsterdam}
+\setbeamertemplate{navigation symbols}{}}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+%----------------------------------------------------------------------------------------
+%	TITULOS
+%----------------------------------------------------------------------------------------
+\title[Seminario de tecnologia]{Unidad 0\\ Introduccion}
+\author{David A. Trejo Pizzo}
+\institute[Instituto Multimedial Da Vinci]
+{Instituto Multimedial Da Vinci\\
+\medskip
+\textit{dtrejopizzo@gmail.com}}
+\date{Marzo, 2015}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	INDICE
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Estructura}
+\tableofcontents
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+\section{Introducción}
+
+\begin{frame}
+\frametitle{Programa de la asignatura}
+
+\begin{itemize}
+\item 20' - La ciencia que estudia el comportamiento de los electrones en los tubos de vacío.
+\item 40' - La ciencia que estudia y aprovecha la electricidad mediante dispositivos semiconductores y otros.
+\item 50' - La rama de la ingeniería que estudia el aprovechamiento de la electricidad en diferentes componentes o dispositivos para generar, transmitir o almacenar información, y otras aplicaciones.
+\end{itemize}
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Ramas}
+\begin{columns}[c]
+
+\column{.5\textwidth}
+Electronica analogica\\
+
+Estudia los sistemas cuyas variables (tensión, corriente, etcétera) varían de una forma continua en el tiempo y pueden tomar (al menos teóricamente) valores infinitos.
+
+\column{.5\textwidth}
+Electronica digital\\
+
+Las variables solo pueden tomar valores discretos y tienen siempre un estado perfectamente definido.
+
+\end{columns}
+\end{frame}
+%------------------------------------------------
+
+\subsection{Electricidad}
+\begin{frame}
+\frametitle{Electricidad}
+
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Cargas electricas}
+
+La materia esta formada por átomos, compuestos por protones, neutrones y electrones. Los electrones tienen carga eléctrica negativa y los protones carga positiva. En estado neutro, existen igual número de electrones que de protones. Si se pierde el equilibrio se le llama ion positivo si ha perdido electrones o ion negativo si tiene exceso de electrones. La unidad para medir la carga eléctrica es el Coulomb:
+1 Coulomb = $6.28x10^{18}$ electrones.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=2in]{cargas}
+\end{figure}
+
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Corriene electrica}
+
+Si en un espacio físico o un cuerpo hay acumulación de cargas positivas en un sitio y negativas en otro se produce un movimiento de electrones de la zona negativa a la positiva, al movimiento de electrones se llama corriente eléctrica. La corriente eléctrica se indica por una flecha y la letra I sobre el elemento por el que pasa la corriente (obsérvese que la corriente es contraria al movimiento de los electrones). La corriente se mide por la cantidad de carga que pasa en la unidad de tiempo.
+
+Su unidad es el amperio.
+
+\end{frame}
+%------------------------------------------------
+
+\section{Electronica analogica}
+
+\subsection{Analisis en DC}
+
+\begin{frame}
+\frametitle{Ley de corrientes de Kirchoff}
+
+La suma algebraica de las corrientes en un nodo es cero. Se considera positiva una corriente que entra al nodo y negativa una corriente que sale del nodo.
+
+$$I_{A} + I_{B} - I_{C} - I_{D} + I_{E} = 0$$
+
+La suma de corrientes que entran a un nodo es igual a la suma de corrientes que salen del nodo.
+
+$$I_{B} + I_{E} = I_{A} + I_{C} + I_{D}$$
+
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Ley de tensiones de Kirchoff}
+
+La suma de voltajes en una trayectoria cerrada o en una malla de un circuito es igual a cero, para la evaluación numérica se toma como positivo el voltaje si se trata de una elevación de voltaje al pasar por el elemento y negativo si hay una caída de voltaje.
+
+\end{frame}
+%------------------------------------------------
+
+
+
+\begin{frame}
+\frametitle{Estructura de los circuitos}
+
+\begin{itemize}
+\item Circuito en serie: dos elementos o circuitos están conectados en serie cuando son los dos unicos elementos que están conectados a un nodo. Como consecuencia de la ley de Corrientes de Kirchhoff las corrientes en dos o más elementos en serie son iguales: $I_{A} = I_{B}$.
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3in]{serie}
+\end{figure}
+
+\end{frame}
+%------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Estructura de los circuitos}
+
+\begin{itemize}
+\item Circuito en paralelo: dos elementos o circuitos están conectados en paralelo cuando los terminales de ambos elementos están conectados a dos nodos comunes. Como consecuencia de la ley de Voltajes de Kirchhoff las tensiones en dos o más elementos en paralelo son iguales: $V_{A} = V_{B}$
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=2in]{paralelo}
+\end{figure}
+
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Ley de Ohm}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=2in]{paralelo}
+\end{figure}
+\end{frame}
+%------------------------------------------------
+
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+%------------------------------------------------
+
+\subsection{Analisis en AC}
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+%------------------------------------------------
+
+\subsection{Componentes}
+\begin{frame}
+\frametitle{Componentes activos y pasivos}
+
+\end{frame}
+%------------------------------------------------
+
+\subsection{Circuitos integrados}
+
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+%------------------------------------------------
+\end{document}

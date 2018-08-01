@@ -1,0 +1,11 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
+\beamer@sectionintoc {2}{AVR}{6}{0}{2}
+\beamer@sectionintoc {3}{Programacion}{16}{0}{3}
+\beamer@subsectionintoc {3}{1}{Operadores y tipos de datos}{18}{0}{3}
+\beamer@subsectionintoc {3}{2}{Sentencias de control}{21}{0}{3}
+\beamer@subsectionintoc {3}{3}{Declaraciones}{26}{0}{3}
+\beamer@sectionintoc {4}{Conversor A-D}{34}{0}{4}
+\beamer@subsectionintoc {4}{1}{Modos de conversi\IeC {\'o}n}{38}{0}{4}
+\beamer@sectionintoc {5}{ATmega328}{42}{0}{5}
+\beamer@subsectionintoc {5}{1}{Puertos analogicos}{44}{0}{5}

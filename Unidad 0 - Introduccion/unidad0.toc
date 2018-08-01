@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Electricidad}{5}{0}{1}
+\beamer@sectionintoc {2}{Electronica analogica}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Analisis en DC}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Analisis en AC}{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{Componentes}{15}{0}{2}
+\beamer@subsectionintoc {2}{4}{Circuitos integrados}{16}{0}{2}

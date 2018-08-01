@@ -1,0 +1,138 @@
+\documentclass[11pt]{exam}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{tikz, pgflibraryplotmarks}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+
+
+% Here's where you edit the Class, Exam, Date, etc.
+\newcommand{\class}{Seminario de tecnología}
+\newcommand{\examnum}{Examen Parcial 3}
+\newcommand{\term}{2 Cuatrimestre, 2014}
+\newcommand{\examdate}{31/10/14}
+\newcommand{\timelimit}{120 minutos}
+
+% For an exam, single spacing is most appropriate
+\singlespacing
+% \onehalfspacing
+% \doublespacing
+
+% For an exam, we generally want to turn off paragraph indentation
+\parindent 0ex
+
+\begin{document} 
+
+% These commands set up the running header on the top of the exam pages
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Pagina \thepage\ de \numpages}{\examdate}
+\runningheadrule
+
+\begin{flushright}
+\begin{tabular}{p{2.8in} r l}
+\textbf{\class} & \textbf{Nombre:} & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&\\
+\textbf{Tiempo: \timelimit}
+\end{tabular}\\
+\end{flushright}
+\rule[1ex]{\textwidth}{.1pt}
+
+
+Este examen consta de \numpages\ paginas y \numquestions\ preguntas. Verifique que tiene todas las hojas necesarias. Las preguntas se responden en la misma hoja del examen.\\
+
+El examen se puede realizar a libro abierto y esta permitido el uso de calculadora si es requerido. Se puede utilizar el contenido del primer  examen como referencia. Se puede utilizar computadora.\\
+
+Las siguientes reglas aplican para la aprobación del examen:\\
+
+\begin{minipage}[t]{3.7in}
+\vspace{0pt}
+\begin{itemize}
+\item Escritura de todas las \textbf{respuestas en tinta, sin excepción}.-
+\item \textbf{Se requiere un mínimo de 10 puntos} para la aprobación del examen.-
+\item Justificar sus respuestas, en caso de ser necesario, con diagramas o ejemplos claro.-
+\item Lea todo el examen antes de comenzar a responder. Algunas preguntas guardan relación con otras y pueden servir de ayuda.-
+\end{itemize}
+
+No escriba en la tabla de la derecha.\\
+\\
+\textbf{Mucha suerte! :)}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{2.3in}
+\vspace{0pt}
+%\cellwidth{3em}
+\gradetablestretch{2}
+\vqword{Pregunta}
+\addpoints % required here by exam.cls, even though questions haven't started yet.	
+\gradetable[v]%[pages]  % Use [pages] to have grading table by page instead of question
+
+\end{minipage}
+\newpage % End of cover page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% See http://www-math.mit.edu/~psh/#ExamCls for full documentation, but the questions
+% below give an idea of how to write questions [with parts] and have the points
+% tracked automatically on the cover page.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{questions}
+
+% Pregunta 1
+\addpoints
+\question[2] Defina el concepto de Minería de datos.
+\vspace{4.5in}
+
+% Pregunta 2
+\addpoints
+\question[2] Defina el concepto de cluster de datos. A que se refiere el concepto de clusterización?
+\vspace{4.5in}
+
+% Pregunta 3
+\addpoints
+\question[1] Indique cual/es de las siguientes herramientas se utilizan para análisis estadístico de clusters:
+\begin{itemize}
+\item SPSS
+\item Weka
+\item Qucs
+\end{itemize}
+
+% Pregunta 4
+\addpoints
+\question[2] \textbf{Indicar verdadero o falso}. Se desea crear un modelo regresión lineal a partir de un data set de entrenamiento. Agregar variables al modelo original siempre reducirá la suma de los cuadrados residuales medidos en el set de validación? \textbf{Justificar}.
+
+% Pregunta 5
+\addpoints
+\question[2] \textbf{Indicar verdadero o falso}. Aunque la selección hacia adelante (forward) y la eliminación hacia atrás (backward) son métodos rápidos para la selección de subconjuntos en regresión lineal, solo la selección por etapas garantiza encontrar el mejor subconjunto. \textbf{Justificar}.
+
+% Pregunta 6
+\addpoints
+\question[2] \textbf{Indicar verdadero o falso}. Un grupo de funciones de clasificación se ordenan utilizando el análisis discriminante para un conjunto de datos con tres clases $C1$, $C2$ y $C3$. Se asume que las tres clases son igualmente propensas a surgir en la aplicación. Posteriormente, se conoce que la probabilidad de $C1$ es el doble que la de $C2$ y $C3$. Las probabilidades para $C2$ y $C3$ son iguales. Si se  vuelven a calcular las funciones de clasificación utilizando esta información, el valor de la función de clasificación para $C1$ se incrementará para cada punto de datos. \textbf{Justificar}.
+
+% Pregunta 7
+\addpoints
+\question[2] \textbf{Indicar verdadero o falso}. La tasa de errores de clasificación de un modelo de clasificación en el conjunto de validación es la mejor medida de la capacidad predictiva del modelo en los nuevos datos, a diferencia de su tasa de errores de clasificación en el conjunto de entrenamiento. \textbf{Justificar}.
+
+% Pregunta 8
+\addpoints
+\question[2] \textbf{Indicar verdadero o falso}. Un clasificador de redes neuronales para dos clases construye un límite de separación entre las clases que es lineal en sumas ponderadas de los valores de entrada. \textbf{Justificar}.
+
+% Pregunta 9
+\addpoints
+\question[2] Un conjunto de datos de 1.000 casos fue dividido en un conjunto de entrenamiento de 600 casos y un conjunto de validación de 400 casos. Un \textbf{k-Nearest Neighbors} con k = 1 tiene una tasa de error de clasificación del 8\% sobre los datos de validación. Posteriormente se descubrió que la división se había hecho de forma incorrecta y que 100 casos del conjunto de datos de entrenamiento se había duplicado y accidentalmente había sobreescrito 100 casos en el conjunto de datos de validación. ¿Cuál es la tasa de error de clasificación para los 300 casos que estaban verdaderamente parte de la validación de datos?
+
+
+
+
+
+
+
+%\includegraphics[scale=0.7]{iotarch.png} 
+\end{questions}
+\end{document}

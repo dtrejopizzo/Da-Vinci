@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
+\beamer@sectionintoc {2}{\IeC {\'A}lgebra de Boole}{6}{0}{2}
+\beamer@sectionintoc {3}{Compuertas}{8}{0}{3}
+\beamer@sectionintoc {4}{Logica combinacional}{15}{0}{4}
+\beamer@sectionintoc {5}{Logica secuencial}{17}{0}{5}

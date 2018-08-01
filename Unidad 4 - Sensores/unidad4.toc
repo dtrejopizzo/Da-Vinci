@@ -1,0 +1,13 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Clasificaci\IeC {\'o}n de sensores}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Caracteristicas}{8}{0}{1}
+\beamer@subsectionintoc {1}{3}{Incertidumbre}{16}{0}{1}
+\beamer@sectionintoc {2}{Sensores}{18}{0}{2}
+\beamer@subsectionintoc {2}{1}{Sistema de balizas terrestres}{26}{0}{2}
+\beamer@subsectionintoc {2}{2}{Vision}{28}{0}{2}
+\beamer@sectionintoc {3}{GPS}{34}{0}{3}
+\beamer@sectionintoc {4}{Wireless Sensor Networks}{40}{0}{4}
+\beamer@subsectionintoc {4}{1}{Topologias}{43}{0}{4}
+\beamer@subsectionintoc {4}{2}{Protocolos}{46}{0}{4}
+\beamer@subsectionintoc {4}{3}{Aplicaciones}{51}{0}{4}

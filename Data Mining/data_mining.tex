@@ -1,0 +1,159 @@
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{Data mining}\\ % Title
+An introductory course} % Subtitle
+
+\author{\textsc{David Alejandro Trejo Pizzo} % Author
+\\{\textit{-}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+In this intoductory chapter we begin with the essence of data mining and a discussion of how data mining is treated by the various disciplines that contribute to this field. We cover “Bonferroni’s Principle,” which is really a warning about overusing the ability to mine data. This chapter is also the place where we summarize a few useful ideas that are not data mining but are useful in understanding some important data-mining concepts. These include the TF.IDF measure of word importance, behavior of hash functions and indexes, and identities involving $e$, the base of natural logarithms. Finally, we give an outline of the topics covered in the balance of the book.
+\end{abstract}
+
+\hspace*{3,6mm}\textit{Keywords:} data mining , clusters , opinion mining% Keywords
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+The most commonly accepted definition of "data mining" is the discovery of
+"models" for data. A "model", however, can be one of several things. We
+mention below the most important directions in modeling.
+
+\subsection{Statistical Modeling}
+
+Statisticians were the first to use the term "data mining". Originally, "data mining" or "data dredging" was a derogatory term referring to attempts to extract information that was not supported by the data. Section 1.2 illustrates the sort of errors one can make by trying to extract what really isn't in the data.\\
+
+Today, "data mining" has taken on a positive meaning. Now, statisticians view data mining as the construction of a statistical model, that is, an underlying distribution from which the visible data is drawn.
+
+\begin{quote}
+Example 1.1: Suppose our data is a set of numbers. This data is much
+simpler than data that would be data-mined, but it will serve as an example. A statistician might decide that the data comes from a Gaussian distribution and use a formula to compute the most likely parameters of this Gaussian. The mean and standard deviation of this Gaussian distribution completely characterize the distribution and would become the model of the data.
+\end{quote}
+
+\subsection{Machine Learning}
+
+There are some who regard data mining as synonymous with machine learning.
+There is no question that some data mining appropriately uses algorithms from
+machine learning. Machine-learning practitioners use the data as a training set,
+to train an algorithm of one of the many types used by machine-learning practitioners, such as Bayes nets, support-vector machines, decision trees, hidden
+Markov models, and many others.\\
+
+There are situations where using data in this way makes sense. The typical
+case where machine learning is a good approach is when we have little idea of
+what we are looking for in the data. For example, it is rather unclear what
+it is about movies that makes certain movie-goers like or dislike it. Thus,
+in answering the "Netflix challenge" to devise an algorithm that predicts the
+ratings of movies by users, based on a sample of their responses, machinelearning
+algorithms have proved quite successful. We shall discuss a simple
+form of this type of algorithm in Section 9.4.\\
+
+On the other hand, machine learning has not proved successful in situations
+where we can describe the goals of the mining more directly. An interesting
+case in point is the attempt by WhizBang! Labs1 to use machine learning to
+locate people’s resumes on theWeb. It was not able to do better than algorithms
+designed by hand to look for some of the obvious words and phrases that appear
+in the typical resume. Since everyone who has looked at or written a resume has
+a pretty good idea of what resumes contain, there was no mystery about what
+makes a Web page a resume. Thus, there was no advantage to machine-learning
+over the direct design of an algorithm to discover resumes.
+
+\subsection{Computational Approaches to Modeling}
+
+More recently, computer scientists have looked at data mining as an algorithmic
+problem. In this case, the model of the data is simply the answer to a complex
+query about it. For instance, given the set of numbers of Example 1.1, we might
+compute their average and standard deviation. Note that these values might
+not be the parameters of the Gaussian that best fits the data, although they
+will almost certainly be very close if the size of the data is large.
+There are many different approaches to modeling data. We have already
+mentioned the possibility of constructing a statistical process whereby the data
+could have been generated. Most other approaches to modeling can be described
+as either
+
+\begin{enumerate}
+\item Summarizing the data succinctly and approximately, or
+\item Extracting the most prominent features of the data and ignoring the rest.
+\end{enumerate}
+
+We shall explore these two approaches in the following sections.
+
+\subsection{Summarization}
+
+One of the most interesting forms of summarization is the PageRank idea, which
+made Google successful and which we shall cover in Chapter 5. In this form
+of Web mining, the entire complex structure of the Web is summarized by a
+single number for each page. This number, the "PageRank" of the page, is
+(oversimplifying somewhat) the probability that a random walker on the graph
+would be at that page at any given time. The remarkable property this ranking
+has is that it reflects very well the "importance" of the page - the degree to
+which typical searchers would like that page returned as an answer to their
+search query.\\
+
+Another important form of summary – clustering – will be covered in Chapter
+7. Here, data is viewed as points in a multidimensional space. Points
+that are "close" in this space are assigned to the same cluster. The clusters
+themselves are summarized, perhaps by giving the centroid of the cluster and
+the average distance from the centroid of points in the cluster. These cluster
+summaries become the summary of the entire data set.\\
+
+\begin{quote}
+Example 1.2 : A famous instance of clustering to solve a problem took place
+long ago in London, and it was done entirely without computers.2 The physician
+John Snow, dealing with a Cholera outbreak plotted the cases on a map of the
+city. A small illustration suggesting the process is shown in Fig. 1.1.
+\end{quote}
+
+%\begin{center}
+%\includegraphics[width=300pt]{tran1}
+%\end{center}
+
+
+\end{document}
